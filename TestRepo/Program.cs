@@ -6,11 +6,21 @@ namespace TestRepo
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("I am thinking of a number between 0 - 100. Guess it!");
+            Console.WriteLine("This is a guessing game. I will ask for a small number, and a bigger number.");
+            Console.WriteLine("Once you tell me those, I will think of a number between them. Then you guess that number!");
+
+            Console.Write("The Smaller Number: ");
+            int min = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Now the Bigger Number: ");
+            int max = Convert.ToInt32(Console.ReadLine());
+
+
+            Console.WriteLine("I am thinking of a number between " + min + " and " + max + ". Guess it!");
 
             System.Random random = new System.Random();
 
-            int number = random.Next(0, 100);
+            int number = random.Next(min, max);
 
             int guess = -1;
 
